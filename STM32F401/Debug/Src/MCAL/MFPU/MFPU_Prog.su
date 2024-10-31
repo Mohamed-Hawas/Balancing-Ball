@@ -1,0 +1,2 @@
+MFPU_Prog.c:25:6:MFPU_Enable	4	static
+MFPU_Prog.c:41:6:MFPU_Disable	4	static

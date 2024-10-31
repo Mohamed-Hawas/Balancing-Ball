@@ -1,0 +1,4 @@
+main.c:29:5:main	8	static
+main.c:53:6:System_Clock_Init	8	static
+main.c:72:6:Interrupt_Init	8	static
+main.c:89:6:HAL_Init	8	static

@@ -1,0 +1,13 @@
+MI2C_Prog.c:51:6:MI2C_vMasterInit	24	static
+MI2C_Prog.c:138:18:MI2C_vMasterTx	24	static
+MI2C_Prog.c:212:18:MI2C_vMaster_MemWrite	24	static
+MI2C_Prog.c:299:4:MI2C_u8MasterRx	32	static
+MI2C_Prog.c:375:6:MI2C_vSlaveInit	24	static
+MI2C_Prog.c:421:4:MI2C_u8SlaveRx	24	static
+MI2C_Prog.c:458:6:MI2C_vSendSlaveADDR	16	static
+MI2C_Prog.c:473:4:MI2C_vSendDataByte	16	static
+MI2C_Prog.c:493:4:MI2C_vReadDataByte	24	static
+MI2C_Prog.c:510:4:MI2C_vGenerateStart	16	static
+MI2C_Prog.c:531:6:MI2C_vClearStart	24	static
+MI2C_Prog.c:538:4:MI2C_vClearADDR	24	static
+MI2C_Prog.c:557:6:MI2C_vGenerateStop	16	static

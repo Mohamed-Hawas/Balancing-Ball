@@ -1,0 +1,10 @@
+HLCD_Prog.c:48:13:LOC_HLCD_vSendCMD	32	static
+HLCD_Prog.c:83:6:HLCD_vInit	8	static
+HLCD_Prog.c:127:6:HLCD_vSendData	32	static
+HLCD_Prog.c:163:6:HLCD_vSendString	16	static
+HLCD_Prog.c:184:6:StringReverse	32	static
+HLCD_Prog.c:214:5:IntToString	32	static
+HLCD_Prog.c:256:5:FloatToString	48	static
+HLCD_Prog.c:308:6:HLCD_vSendNum	40	static
+HLCD_Prog.c:338:6:HLCD_vPutCur	16	static
+HLCD_Prog.c:371:6:HLCD_vClear	16	static
