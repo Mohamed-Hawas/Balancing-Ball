@@ -14,6 +14,7 @@
 5. [Low-Pass Filter with Derivative Part](#low-pass-filter-with-derivative-part)
 6. [Low-Pass Filter with Servo](#low-pass-filter-with-servo)
 7. [Clamping Saturation Error](#clamping-saturation-error)
+8. [References](#references)
 ---
 
 ## Introduction
