@@ -26,6 +26,7 @@ To control the ball’s position, we first modeled the system dynamics. Starting
 <p align="center">
   <img src="images/ball and beam.png" alt="Transfer Function" width="300">
 </p>
+
 - **Mass of the ball (m)**: 0.0065 kg
 - **Radius of the ball (R)**: 0.034 m
 - **Gravity (g)**: 9.8 m/s²
