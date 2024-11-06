@@ -9,12 +9,12 @@ J = 3.0056e-6;
 s = tf('s');
 P_ball = -m*g*d/L/(J/R^2+m)/s^2
 
-%pzmap(P_ball);
-%step(P_ball);
+pzmap(P_ball);
+step(P_ball);
 
-Kp = 2.5;
+Kp = 3;
 Ki = 1 ;
-Kd = 1.7;
+Kd = 1.5;
 
 
 C = pid(Kp,Ki,Kd);
@@ -23,5 +23,4 @@ sys_cl=feedback(C*P_ball,1);
 
 pidtool(sys_cl);
 
-%t=0:0.01:5;
-step(sys_cl)
+step(P_ball)
