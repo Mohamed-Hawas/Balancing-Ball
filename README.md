@@ -42,6 +42,11 @@ And the final transfer function after substitution  is :
   <img src="images/tf_final.png" alt="Transfer Function" width="200">
 </p>
 
+The step response of opened-loop :
+
+<p align="center">
+  <img src="images/step_response before pid.png" alt="Transfer Function" width="500">
+</p>
 This transfer function was then visualized using a step response plot to validate the system's stability and response characteristics.
 
 ## PID Control Code
@@ -49,17 +54,60 @@ This transfer function was then visualized using a step response plot to validat
 The **PID controller** was implemented to adjust the beam angle, ensuring the ball remains at the target position. Key PID parameters (\(Kp\), \(Ki\), \(Kd\)) were tuned to balance the system effectively.
 
 ```c
-void set_pid_parameters (f64 copy_Kp, f64 copy_Ki, f64 copy_Kd, f64 copy_dt_ms ){
-    Kp = copy_Kp;
-    Ki = copy_Ki;
-    Kd = copy_Kd;
-    dt = copy_dt_ms / 1000;
-    // Initializes the timer to trigger PID calculations periodically.
-    MTIMER_vPeriodicMS(TIMER2, copy_dt_ms);
-}
+FUNCTION Balance()
+    // Get the current distance from the sensor
+    distance = GetDistance()
+
+    // Handle error in the ultrasonic sensor reading
+    IF distance > 32 OR distance < 0
+        distance = prevDistance
+    END IF
+
+    // Calculate the error and change in error
+    error = distance - REFERENCE_POS
+    dError = error - prevError
+    
+    // Proportional term (P)
+    P = error
+    
+    // Integral term (I)
+    I = I + (error * dt)
+    
+    // Low-pass filter applied to derivative error (dError)
+    dError = LowPassFilter(dError, prev_dError, 0.2)
+    
+    // Derivative term (D)
+    D = dError / dt
+
+    // Calculate servo angle using PID control
+    servoAngle = Kp * P + Ki * I + Kd * D
+
+    // Apply low-pass filter to servo angle
+    servoAngle = LowPassFilter(servoAngle, prevServoAngle, 0.3)
+
+    // Move the servo to the new angle
+    Servo(servoAngle)
+
+    // Clamping saturation error
+    IF (prevServoAngle is same sign as servoAngle) AND (servoAngle / distance > 0) AND (servoAngle > 60 OR servoAngle < -45)
+        I = 0  // Disable the integrator
+    END IF
+
+    // Update previous values for the next iteration
+    prevError = error
+    prev_dError = dError
+    prevDistance = distance
+    prevServoAngle = servoAngle
+END FUNCTION
 ```
 
 Within each control loop, the **PID algorithm** computes the error, integral, and derivative components. The calculated output then drives the servo motor, correcting the beam angle to stabilize the ball.
+
+The step response of closed-loop at Kp=3 , Ki=1 and Kd=1.5 :
+
+<p align="center">
+  <img src="images/step_response after pid.png" alt="Transfer Function" width="500">
+</p>
 
 ## Implementation of Low-Pass Filter
 
