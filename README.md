@@ -138,7 +138,7 @@ END FUNCTION
 ```
 
 The `alpha` value was selected based on the desired cutoff frequency, balancing responsiveness and stability.
-Certainly! Here’s the section presented as pseudocode in Markdown:
+Certainly!
 
 ## Low-Pass Filter with Derivative Part
 
