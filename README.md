@@ -23,7 +23,9 @@ This project involves designing a **Balancing Ball System** on an STM32F401 micr
 ## Modeling and Transfer Function
 
 To control the ball’s position, we first modeled the system dynamics. Starting from the physical parameters:
-
+<p align="center">
+  <img src="images/ball and beam.png" alt="Transfer Function" width="300">
+</p>
 - **Mass of the ball (m)**: 0.0065 kg
 - **Radius of the ball (R)**: 0.034 m
 - **Gravity (g)**: 9.8 m/s²
@@ -178,6 +180,12 @@ END IF
 3. **Condition 3**: Confirm if the servo angle has exceeded predefined bounds (between -45 and 60 degrees).
 
 By setting the integral term to zero when these conditions are met, this approach reduces unnecessary corrective action, stabilizing the response of the control system.
+
+## References
+[Understanding PID (Matlab Teck Talks)](https://www.youtube.com/watch?v=wkfEZmsQqiA&list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y)
+
+[Control Tutorial : Ball & Beam](https://ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling)
+
 
 ---
 This documentation structure should be a good starting point for conveying the technical depth and functionalities of the project.
