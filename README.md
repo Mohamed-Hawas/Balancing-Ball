@@ -6,6 +6,8 @@
   <img src="images/Picture1.png" alt="Transfer Function" >
 </p>
 
+### [Video Demo](https://drive.google.com/file/d/1aOpkr3ut5UhT93vUj-3xENdrIhEUkfWI/view?usp=sharing)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Modeling and Transfer Function](#modeling-and-transfer-function)
