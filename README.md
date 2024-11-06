@@ -186,7 +186,7 @@ END IF
 By setting the integral term to zero when these conditions are met, this approach reduces unnecessary corrective action, stabilizing the response of the control system.
 
 ## References
-[Understanding PID (Matlab Teck Talks)](https://www.youtube.com/watch?v=wkfEZmsQqiA&list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y)
+[Understanding PID (Matlab Tech Talks)](https://www.youtube.com/watch?v=wkfEZmsQqiA&list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y)
 
 [Control Tutorial : Ball & Beam](https://ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling)
 
